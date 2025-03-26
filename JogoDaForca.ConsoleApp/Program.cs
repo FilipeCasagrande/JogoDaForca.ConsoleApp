@@ -16,16 +16,13 @@
                     letrasencontradas[caractere] = '_';
                 }
 
-
-
                 int quantidadedeerros = 0;
                 bool jogadorenforcou = false;
                 bool jogadoracertou = false;
 
-
                 do
                 {
-                    string dicadapalavra = String.Join("" ,letrasencontradas);
+                    string dicadapalavra = String.Join(" " ,letrasencontradas);
                     Console.Clear();
                     Console.WriteLine("---------------------------------------");
                     Console.WriteLine("Jogo da Forca");
@@ -34,10 +31,82 @@
                     Console.WriteLine("---------------------------------------");
                     Console.WriteLine("Quantiadade de erros: " + quantidadedeerros);
                     Console.WriteLine("---------------------------------------");
-
+                    if (quantidadedeerros == 0)
+                    {
+                        Console.WriteLine(" ___________        ");
+                        Console.WriteLine(" |/        |        ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine("_|____              ");
+                    }
+                    else if(quantidadedeerros == 1)
+                    {
+                        Console.WriteLine(" ___________        ");
+                        Console.WriteLine(" |/        |        ");
+                        Console.WriteLine(" |         O        ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine("_|____              ");
+                    }
+                    else if (quantidadedeerros == 2)
+                    {
+                        Console.WriteLine(" ___________        ");
+                        Console.WriteLine(" |/        |        ");
+                        Console.WriteLine(" |         O        ");
+                        Console.WriteLine(" |         |        ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine("_|____              ");
+                    }
+                    else if (quantidadedeerros == 3)
+                    {
+                        Console.WriteLine(" ___________        ");
+                        Console.WriteLine(" |/        |        ");
+                        Console.WriteLine(" |         O        ");
+                        Console.WriteLine(" |        /|        ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine("_|____              ");
+                    }
+                    else if (quantidadedeerros == 4)
+                    {
+                        Console.WriteLine(" ___________        ");
+                        Console.WriteLine(" |/        |        ");
+                        Console.WriteLine(" |         O        ");
+                        Console.WriteLine("          /|\\       ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine("_|____              ");
+                    }
+                    else if (quantidadedeerros == 5)
+                    {
+                        Console.WriteLine(" ___________        ");
+                        Console.WriteLine(" |/        |        ");
+                        Console.WriteLine(" |         O        ");
+                        Console.WriteLine(" |        /|\\       ");
+                        Console.WriteLine(" |        / \\      ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine(" |                  ");
+                        Console.WriteLine("_|____              ");
+                    }
 
                     Console.Write("Digite uma letra: ");
                     char chute = Console.ReadLine()[0];
+                    
 
                     bool Letrafoiencontrada = false;
 
@@ -55,7 +124,7 @@
                         quantidadedeerros++;
                     
                     
-                    dicadapalavra = String.Join(" ", letrasencontradas);
+                    dicadapalavra = String.Join("" , letrasencontradas);
 
                     jogadoracertou = dicadapalavra == palavrasecreta;
 
@@ -64,7 +133,7 @@
                     if (jogadoracertou)
                     {
                         Console.WriteLine("---------------------------------------");
-                        Console.WriteLine("você acertou a palavra secreta era" + palavrasecreta);
+                        Console.WriteLine("você acertou a palavra secreta era: " + palavrasecreta);
                         Console.WriteLine("---------------------------------------");
                     }
                     else if (jogadorenforcou)
